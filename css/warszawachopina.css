@@ -1,0 +1,25 @@
+.tl-timeaxis-background {
+    background-color: #f0f3db;
+}
+
+#timeline-embed {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.tl-timeaxis-major .tl-timeaxis-tick-text, .tl-timeaxis-major .tl-timeaxis-tick {
+    color: #241025;
+    font-weight: bold;
+}
+
+.tl-timeaxis-minor .tl-timeaxis-tick-text, .tl-timeaxis-minor .tl-timeaxis-tick  {
+    color: #322b37;
+}
+
+.tl-timenav {
+    background-color: #7f9c95;
+}
