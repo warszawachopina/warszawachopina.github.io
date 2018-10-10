@@ -11,15 +11,28 @@
     right: 0;
 }
 
+/*
 .tl-timeaxis-major .tl-timeaxis-tick-text, .tl-timeaxis-major .tl-timeaxis-tick {
     color: #241025;
     font-weight: bold;
+    font-size: 14pt;
+}
+
+.tl-timeaxis-major .tl-timeaxis-tick::before {
+    border-left: 2px solid #241025;
 }
 
 .tl-timeaxis-minor .tl-timeaxis-tick-text, .tl-timeaxis-minor .tl-timeaxis-tick  {
     color: #322b37;
+    font-size: 14pt;
+}
+
+.tl-timeaxis-minor .tl-timeaxis-tick::before {
+    border-left: 1px solid #322b37;
 }
 
 .tl-timenav {
     background-color: #7f9c95;
 }
+*/
+
