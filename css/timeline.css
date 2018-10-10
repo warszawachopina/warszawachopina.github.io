@@ -1202,8 +1202,8 @@
   width: 100%;
   height: 100%;
   background-color: rgba(101, 131, 124, 0.15);
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
   -webkit-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
   -moz-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
   -o-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
@@ -1218,8 +1218,8 @@
   position: absolute;
   width: 100%;
   background-color: #65837c;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   height: 100px;
   box-sizing: border-box;
 }
@@ -1239,7 +1239,7 @@
   -moz-box-sizing: border-box;
   /* Firefox, other Gecko */
   box-sizing: border-box;
-  border-left: 1px solid #5a746e;
+  border-left: 1px solid #241025;
   z-index: 5;
   content: " ";
   position: absolute;
@@ -1271,9 +1271,9 @@
   position: absolute;
   background-color: #65837c;
   border: 0;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
   height: 100%;
   width: 100px;
   overflow: hidden;
@@ -1287,7 +1287,7 @@
   -o-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   box-sizing: border-box;
-  border: 1px solid #5a746e;
+  border: 1px solid #241025;
   box-shadow: 1px 1px 1px #F0F3DB;
 }
 .tl-timemarker .tl-timemarker-content-container:hover {
@@ -1632,9 +1632,9 @@
 .tl-timeera .tl-timeera-content-container {
   position: absolute;
   border: 0;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
   height: 100%;
   width: 100px;
   overflow: hidden;
@@ -1647,7 +1647,7 @@
   -o-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   box-sizing: border-box;
-  border: 1px solid #5a746e;
+  border: 1px solid #241025;
 }
 .tl-timeera .tl-timeera-content-container .tl-timeera-content {
   position: relative;
@@ -3198,9 +3198,27 @@
   font-family: "Georgia", Times New Roman, Times, serif !important;
   font-size: 16pt;
 }
+.tl-timemarker .tl-timemarker-content-container {
+  box-shadow: none;
+  width: 60px;
+}
 .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline,
 .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 16px;
+  font-size: 12px;
+}
+.tl-timemarker .tl-timemarker-line-left,
+.tl-timemarker .tl-timemarker-line-right {
+  border-left: 1px solid #65837c;
+  box-shadow: none;
+}
+.tl-timemarker .tl-timemarker-line-left:after,
+.tl-timemarker .tl-timemarker-line-right:after {
+  background-color: #1c2422;
+}
+.tl-timemarker:hover {
+  background-color: rgba(1, 1, 1, 0.1);
 }
 .tl-timemarker:hover.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline.tl-headline-fadeout:after {
   background: -moz-linear-gradient(top, rgba(50, 43, 55, 0) 0%, #322B37 80%);
@@ -3226,6 +3244,10 @@
 .tl-timemarker:hover.tl-timemarker-active .tl-timemarker-line-right:after {
   background-color: #241025;
 }
+.tl-timemarker.tl-timemarker-active .tl-timemarker-line-left,
+.tl-timemarker.tl-timemarker-active .tl-timemarker-line-right {
+  box-shadow: none;
+}
 .tl-timemarker.tl-timemarker-active .tl-timemarker-timespan {
   background-color: rgba(127, 156, 149, 0.5);
 }
@@ -3233,6 +3255,7 @@
   background-color: #322B37;
   color: #FFF;
   border-color: rgba(50, 43, 55, 0.5);
+  box-shadow: none;
 }
 .tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline {
   color: #FFF;
@@ -3252,6 +3275,12 @@
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@thecolor', endColorstr='@thecolor', GradientType=0);
   /* IE6-9 */
+}
+.tl-timemarker.tl-timemarker-with-end {
+  border-bottom-right-radius: 0 !important;
+}
+.tl-timemarker.tl-timemarker-with-end .tl-timemarker-content-container {
+  border-bottom-right-radius: 0 !important;
 }
 .tl-menubar {
   top: -10%;
